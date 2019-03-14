@@ -20,11 +20,20 @@ var john = {
     {
         console.log(this);
         console.log(2016 - this.yearOfBirth);
-
+        /*
         function innerFunction() {
-            console.log(this); // this is very important
+            console.log(this); // this is very important, console window object
         }
         innerFunction();
+        */
     }
 }
 john.calculateAge();
+
+var mike = {
+    name: 'Mike',
+    yearOfBirth: 1984
+};
+
+mike.calculateAge = john.calculateAge //borrow
+mike.calculateAge();
