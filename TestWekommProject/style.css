@@ -1,0 +1,33 @@
+#header {
+    position: relative;
+    overflow: hidden;
+    background: #333;
+}
+
+#header::before,
+#header::after {
+    position: absolute;
+    content: "";
+    width: 464px;
+    height: 900px;
+    top: 217px;
+    left: calc(50% - 39px);
+    transform: translateX(0) translateY(0) rotate(45deg);
+    background: #000;
+    transform-origin: left top;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    background: #000;
+    z-index: 2;
+}
+
+#header::after {
+    width: 2060px;
+    height: 2060px;
+    top: 50%;
+    left: calc(50% + 1437px);
+    transform: translateX(0) translateY(-50%) rotate(45deg);
+    border: 1px solid #000;
+    z-index: 1;
+}
